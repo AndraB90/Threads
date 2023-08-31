@@ -1,6 +1,6 @@
 package example3;
 
-public class CustomThread implements Runnable{
+public class CustomThread implements Runnable {
 
     int threadNumber;
 
@@ -10,8 +10,8 @@ public class CustomThread implements Runnable{
 
     @Override
     public void run() {
-        for (int i = 1; i <=5 ; i++) {
-            System.out.println("Thread "+threadNumber+" shows number "+i);
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread " + threadNumber + " shows number " + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
