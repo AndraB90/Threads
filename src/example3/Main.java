@@ -2,13 +2,13 @@ package example3;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i < 5 ; i++) {
+        for (int i = 0; i < 5; i++) {
             CustomThread customThread = new CustomThread(i);
-            // Pentru un Thread definit prin interfata Runnable mai trebuie facut un extra pas,
-            // trebuie creat un alt Thread simplu care ia ca parametru Thread-ul custom
+            // For a Thread defined by the Runnable Interface you need to make an extra step,
+            // you need to create a simple Thread, which takes as parameter a custom Thread
             Thread thread = new Thread(customThread);
             thread.start();
-            System.out.println("Prioritatea este: "+thread.getPriority());
+            System.out.println("The Priority is: " + thread.getPriority());
             /*try {
                 thread.join();
             } catch (InterruptedException e) {
@@ -17,7 +17,7 @@ public class Main {
 
              */
 
-            if(i == 3){
+            if (i == 3) {
                 throw new RuntimeException();
             }
         }
