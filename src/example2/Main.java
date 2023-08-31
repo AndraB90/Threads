@@ -8,9 +8,9 @@ public class Main {
         newThread1.start();
 
          */
-        // Diferenta intre run si start: start ne ajuta sa rulam in paralel (concurrency) iar run ruleaza secvential
+        // Difference between run and start: start helps us to work in parallel (concurrency) and run works in sequence
 
-        System.out.println("Numele primului Thread este: "+newThread.getName());
-        System.out.println("Numele la al doilea Thread este: "+newThread1.getName());
+        System.out.println("The name of the first Thread is: " + newThread.getName());
+        System.out.println("The name of the second Thread is: " + newThread1.getName());
     }
 }

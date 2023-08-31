@@ -1,8 +1,4 @@
 
-F
-src/example2/Main.java,0/f/0fc43906393b128b4284187341fa217c64146733
-K
-src/example2/NewThread.java,3/4/34701f75da1780673a0a9b1ba10207ccdaacea9e
 N
 src/example3/CustomThread.java,5/0/5053899747fc544e191d1f2ff7598bf9a392e125
 F
