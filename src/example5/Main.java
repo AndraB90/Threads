@@ -2,12 +2,12 @@ package example5;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        // Defineste 2 Thread-uri custom in cele doua moduri diferite
-        // Primul va afisa numerele de la 1 la 10
-        // 2-lea de la 10 la 1
-        //Ruleazale in parallel apoi ruleazale sincronizat
+        // Define two custom Threads (using two different approaches)
+        // First will print the numbers between 1 and 10
+        // The second will print the numbers between 10 and 1
+        // Run them firstly in parallel manner then in sequence
 
-        // Parallel
+        // Parallel / Concurrency
         NewThread1 newThread1 = new NewThread1();
         NewThread2 newThread2 = new NewThread2();
         /*Thread thread = new Thread(newThread2);
@@ -20,7 +20,7 @@ public class Main {
          */
 
 
-        // Secvential
+        // In Sequence
 
         newThread1.run();
         newThread2.run();

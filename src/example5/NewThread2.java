@@ -11,7 +11,5 @@ public class NewThread2 implements Runnable {
 
             }
         }
-
-
     }
 }
