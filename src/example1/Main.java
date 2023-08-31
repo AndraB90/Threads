@@ -5,40 +5,29 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        /*for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
 
-            }
-        }
-
-         */
-        // Afiseaza cate Thread-uri sunt active in acest moment
-        System.out.println("Numarul thread-urilor active: "+Thread.activeCount());
+        // Print how many Threads are active now
+        System.out.println("Number of active Threads: " + Thread.activeCount());
         Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-        for (var thread: threadSet) {
-            System.out.println(thread+" este daemon: "+thread.isDaemon());
+        for (var thread : threadSet) {
+            System.out.println(thread + " is daemon: " + thread.isDaemon());
         }
 
-        // Afiseaza numele Thread-ului activ
-        System.out.println("Numele thread-ului activ este: "+Thread.currentThread().getName());
+        // Print the name of active Thread
+        System.out.println("Name of active Thread: " + Thread.currentThread().getName());
 
-        //Schimba numele Thread-ului activ
+        // Change name of active Thread
         Thread.currentThread().setName("Mircea");
-        System.out.println("Numele thread-ului activ este: "+Thread.currentThread().getName());
+        System.out.println("Name of active Thread: " + Thread.currentThread().getName());
 
-        //Afiseaza prioritatea Thread-ului principal
-        System.out.println("Prioritatea Thread-ului "+Thread.currentThread().getName()+" este: "+Thread.currentThread().getPriority());
+        // Show priority of main Thread
+        System.out.println("Priority of Thread " + Thread.currentThread().getName() + " is: " + Thread.currentThread().getPriority());
 
-        //Schimba prioritatea Thread-uliu principal
+        // Change priority of main Thread
         Thread.currentThread().setPriority(10);
-        System.out.println("Prioritatea Thread-ului "+Thread.currentThread().getName()+" este: "+Thread.currentThread().getPriority());
+        System.out.println("Priority of Thread " + Thread.currentThread().getName() + " is: " + Thread.currentThread().getPriority());
 
-        // Afiseaza daca Thread-ul current este activ
-        System.out.println("Thread-ul "+Thread.currentThread().getName()+" este activ: "+Thread.currentThread().isAlive());
-
-
+        // Show if current Thread is active
+        System.out.println("Thread " + Thread.currentThread().getName() + " is activ: " + Thread.currentThread().isAlive());
     }
 }
