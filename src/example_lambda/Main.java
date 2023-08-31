@@ -2,7 +2,7 @@ package example_lambda;
 
 public class Main {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(() ->{
+        Thread thread1 = new Thread(() -> {
             System.out.println("Thread 1");
             while (true) {
                 System.out.println("Hello");
@@ -14,7 +14,7 @@ public class Main {
             }
         });
 
-        Thread thread2 = new Thread(() ->{
+        Thread thread2 = new Thread(() -> {
             System.out.println("Thread 2");
             while (true) {
                 System.out.println("World");
@@ -44,7 +44,7 @@ public class Main {
         }
 
 
-        //thread1.stop(); // asta functioneaza
-        thread2.interrupt(); // asta nu
+        //thread1.stop(); // this worked for me, even if it is deprecated
+        thread2.interrupt(); // this not
     }
 }
