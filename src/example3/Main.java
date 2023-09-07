@@ -14,9 +14,7 @@ public class Main {
             } catch (InterruptedException e) {
 
             }
-
              */
-
             if (i == 3) {
                 throw new RuntimeException();
             }
